@@ -497,7 +497,7 @@ void Application::Start() {
                     voice_detected_ = false;
                 }
                 auto led = Board::GetInstance().GetLed();
-                led->OnStateChanged();
+                if (led) { led->OnStateChanged(); }
             }
         });
     });
@@ -730,7 +730,7 @@ void Application::SetDeviceState(DeviceState state) {
     auto codec = board.GetAudioCodec();
     auto display = board.GetDisplay();
     auto led = board.GetLed();
-    led->OnStateChanged();
+    if (led) { led->OnStateChanged(); }
     switch (state) {
         case kDeviceStateUnknown:
         case kDeviceStateIdle:
