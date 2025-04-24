@@ -29,6 +29,7 @@ choice BOARD_TYPE
     help
         Board type. 开发板类型
     config BOARD_TYPE_QUINCY_ESP32_PLAYER
+        select USE_WECHAT_MESSAGE_STYLE
         bool "Quincy ESP32 Player"
     config BOARD_TYPE_BREAD_COMPACT_WIFI
         bool "面包板新版接线（WiFi）"

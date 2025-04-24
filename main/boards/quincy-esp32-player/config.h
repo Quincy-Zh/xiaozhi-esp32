@@ -28,7 +28,7 @@
 #endif
 
 
-#define BUILTIN_LED_GPIO        GPIO_NUM_NC
+#define BUILTIN_LED_GPIO        GPIO_NUM_17 // 实际没有接线，这里只是避免 main\application.cc 里引用 led 时报错而已
 #define BOOT_BUTTON_GPIO        GPIO_NUM_45
 #define TOUCH_BUTTON_GPIO       GPIO_NUM_38 
 #define VOLUME_UP_BUTTON_GPIO   GPIO_NUM_40

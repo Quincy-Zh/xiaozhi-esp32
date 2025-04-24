@@ -171,8 +171,8 @@ public:
     }
 
     virtual Led* GetLed() override {
-        // 没有 LED 指示灯~
-        return nullptr;
+        static SingleLed led_strip(BUILTIN_LED_GPIO);
+        return &led_strip;
     }
 
     virtual AudioCodec* GetAudioCodec() override {
